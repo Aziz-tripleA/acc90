@@ -1,0 +1,32 @@
+<?php
+
+return [
+    "" => "",
+    "add_rating" => "التقييم",
+    "add_review" => "إضافة تقييم",
+    "all_reviews" => "كل التعليقات",
+    "as_customer" => "كعميل",
+    "as_provider" => "كمقدم خدمة",
+    "customer_ratings" => "التقييم كعميل",
+    "delete_review_label" => "هذا التعليق سيتم حذفه",
+    "filter_reviews" => "تصفية التعليقات",
+    "my_reviews" => "تقيماتي",
+    "no_reviews" => "لم يتم تقديم تعليقات حتى الآن",
+    "overall_rating" => "تقييم عام",
+    "post_review" => " إضافة التقييم",
+    "provider_rating" => "التقيم كمقدم الخدمة",
+    "rate" => "التقييم",
+    "restaurant_rating" => "تقييم المطعم",
+    "restaurants_reviews" => "التعليقات علي المطاعم",
+    "review" => "التعليق",
+    "review_date" => "تاريخ التعليق",
+    "reviews" => "التعليقات",
+    "search_reviews" => "بحث التعليقات",
+    "services_reviews" => "تعليقات علي الخدمات",
+    "stars" => "نجوم",
+    "submit_review" => "إضافة تقييم",
+    "submit_review_label" => "قم بكتابة تعليقك",
+    "update_review" => "تعديل التقييم",
+    "view_all_reviews" => "عرض كل التعليقات",
+    "write_review" => "التعليق"
+];
