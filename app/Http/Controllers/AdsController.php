@@ -51,7 +51,7 @@ class AdsController extends Controller
                         'route' => route('ads.index')
                     ]
                 ]
-                , $ad->title ,false) 
+                , $ad->title ,false)
             ]);
     }
 }

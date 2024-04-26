@@ -19,7 +19,7 @@
               <strong>معلومات شخصية</strong>
             </li>
             <li class="active">
-              <div class="contact-step-number"><span>٢</span></div>
+              <div class="contact-step-number" style="background-color: #209AB8"><span>٢</span></div>
               <strong> نوع المشورة المطلوبة </strong>
             </li>
             <li>
@@ -90,7 +90,7 @@
                         @if (count($types)>0)
                           @foreach ($types as $type)
                             <option value="{{$type->id}}" @if ($request->counseling_type_id == $type->id) selected @endif>{{$type->type}}</option>
-                          @endforeach                          
+                          @endforeach
                         @endif
                     </select>
 
@@ -165,7 +165,7 @@
               <div class="policies-key">
                 <label class="custom-checkbox checkbox">
                   <div class="custom-checkbox-label">
-                    <span>نرجو ارسال الابليكيشن بعد عمل scan علي الايميل التالي counseling.requests@gmail.com او تسليمها للمكتب مباشرة </span>           
+                    <span>نرجو ارسال الابليكيشن بعد عمل scan علي الايميل التالي counseling.requests@gmail.com او تسليمها للمكتب مباشرة </span>
                   </div>
                 </label>
               </div>
@@ -192,7 +192,7 @@
             </div>
           </div>
           <div class="form-actions">
-            <a class="form-cancel-btn" href="#">إلغاء </a>
+            <a class="form-cancel-btn" href="{{ route('askhelp.create') }}">إلغاء </a>
             <button type="submit" class="form-main-btn" >
                 <span class="no-margin">تأكيد الطلب</span>
             </a>
@@ -227,8 +227,8 @@
     let type = $('#InputType').val();
     // let day = $('#InputDay').val();
     // let am_pm = $('input[name="am_pm"]').val();
-    let terms = '';
-    let transfer = '';
+    let terms =$('#InputTerms').is(':checked');
+    let transfer =$('#InputTransfer').is(':checked');
     if($('#InputTransfer').is(":checked")){
       let transfer = $('#InputTransfer').is(":checked") ;
     }
@@ -272,7 +272,7 @@
 
 $(document).ready(function(){
     $('#InputType').on('change', function(){
-    	 var demovalue = $(this).val(); 
+    	 var demovalue = $(this).val();
        $("a.type").hide();
        $("#show"+demovalue).show();
     });

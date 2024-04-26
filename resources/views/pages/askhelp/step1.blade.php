@@ -15,7 +15,7 @@
         <div class="contact-steps">
           <ul>
             <li class="active">
-              <div class="contact-step-number"><span>١</span></div>
+              <div class="contact-step-number" style="background-color: #209AB8"><span>١</span></div>
               <strong>معلومات شخصية</strong>
             </li>
             <li>

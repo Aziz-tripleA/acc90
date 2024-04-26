@@ -24,9 +24,9 @@ class UpdateAskHelpRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'terms'=> 'required',
-            // 'counseling_type_id' => 'required',
-            // 'transfer' => 'required',
+             'terms'=> 'required',
+             'counseling_type_id' => 'required',
+             'transfer' => 'required',
             // 'am_pm' => 'required',
         ];
     }

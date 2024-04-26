@@ -54,16 +54,17 @@
               <div class="main-slider-img-wrap wow fadeInUp">
                 {{-- @if (!request()->is('*books/*')) --}}
                 <div class="main-slider-img">
+                    @php echo($image) @endphp
                   <img src="{{ isset($image)&&!empty($image)?$image:asset('assets/images/default_image.png') }}" alt="" />
                 </div>
                 {{-- @endif  --}}
               </div>
-              @include('layouts.partials.breadcrumb') 
+              @include('layouts.partials.breadcrumb')
             </div>
         </div>
-      </div>  
+      </div>
       @yield('f-content')
-                
+
     </section>
     @endisset
     {{--if the footer in front-end different than in dashboard--}}
