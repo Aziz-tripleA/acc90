@@ -38,11 +38,11 @@
           <li class="header-nav-item">
             <a href="{{ route('contact') }}">{{$locale=='en'?GoogleTranslate::trans('اتصل بنا', $locale):'اتصل بنا'}}</a>
           </li>
-          {{-- <li class="header-nav-item">
+           <li class="header-nav-item">
             <div class="header-search-key">
               <img src="{{ asset('assets/images/icons/search.png') }}" alt="" width="18" />
             </div>
-          </li> --}}
+          </li>
           <li class="header-nav-item">
             <a class="border-btn" href="{{ route('askhelp.create') }}"> {{$locale=='en'?GoogleTranslate::trans('طلب مشورة شخصية ', $locale):'طلب مشورة شخصية'}}</a>
           </li>
@@ -72,9 +72,9 @@
 </header>
 <div class="header-search">
   <div class="header-search-content">
-    <form action="">
+    <form id="search-form">
       <div class="form-group">
-        <input class="form-input" type="text" placeholder="بحث…" /><img
+        <input id="search-input" class="form-input" type="text" placeholder="بحث…" /><img
           class="input-floating-icon"
           src="{{ asset('assets/images/icons/search.png') }}"
           alt=""
@@ -85,6 +85,9 @@
       <img src="{{ asset('assets/images/new/icons/close-black.png') }}" alt="" />
     </div>
   </div>
+    <div style="display: flex;justify-content: center;flex-direction: column" id="search-results">
+
+    </div>
 </div>
 <div class="megamenu-contain">
   <div class="megamenu-wrap">
@@ -124,3 +127,33 @@
     </div>
   </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var searchResults = $('#search-results')
+        $('#search-form').on('submit', function(e) {
+            e.preventDefault();
+            var query = $('#search-input').val();
+            var csrfToken = "{{ csrf_token() }}";
+            $.ajax({
+                type: 'POST',
+                url: '/search',
+                data: {     _token: csrfToken,query: query },
+                success: function(data) {
+
+                    let html = '';
+
+                    data.forEach(result => {
+                        console.log(result)
+                        html += `<div style="width: 50vw;margin: 20px" class="search-result-item"><a href="${result.url}">${result.title}</a></div>`; // Replace 'name' with the attribute you want to display
+                    });
+
+                    searchResults.append(html);
+
+                }
+            });
+        });
+    });
+
+</script>

@@ -5,11 +5,13 @@ namespace App\Models;
 use App\Models\Traits\HasMedia;
 use App\Models\Traits\HasSortings;
 use App\Models\Traits\HasStatus;
+use Spatie\Searchable\Searchable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia as HasMediaContract;
+use Spatie\Searchable\SearchResult;
 
-class Book extends BaseModel implements HasMediaContract
+class Book extends BaseModel implements HasMediaContract ,Searchable
 {
     use HasFactory, HasMedia, HasStatus, HasSortings;
     protected $guarded = ['id'];
@@ -43,5 +45,16 @@ class Book extends BaseModel implements HasMediaContract
     public function getCoverAttribute()
     {
         return $this->getFirstMedia('cover');
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('book.show', $this->slug);
+
+        return new SearchResult(
+            $this,
+            $this->item_name,
+            $url
+        );
     }
 }
