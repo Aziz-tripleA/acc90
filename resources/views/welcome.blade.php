@@ -53,6 +53,11 @@
     <!-- start: style files -->
     <link rel="stylesheet" href="{{asset('assets/styles/style.min-rtl.css')}}">
     <!-- end: style files end/. -->
+    <style>
+        .fit-image{
+            object-position: center !important;
+        }
+    </style>
 </head>
 <body>
 
