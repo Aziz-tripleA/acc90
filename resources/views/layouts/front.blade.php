@@ -33,6 +33,12 @@
     <script src="{{asset('assets/scripts/app.min.js')}}"></script>
 
     @yield('f-styles')
+
+    <style>
+        .fit-image{
+            object-position: center !important;
+        }
+    </style>
 @endsection
 @section('content')
     {{--if there's custom navbar in home page--}}
