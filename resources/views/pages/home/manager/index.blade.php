@@ -177,7 +177,7 @@
 
             function submitFeaturedForm(modelId) {
                 let modelType = $('#model_type').val();
-                console.log("model type =>",modelType)
+
                 $.ajax({
                     url: $('#featuredForm').attr('action'),
                     method: 'POST',
@@ -203,7 +203,7 @@
             $('#saveOrder').on('click', function (e) {
 
                 var orderedIds = $('#sortable').sortable('toArray', {attribute: 'data-id'});
-                console.log("ordered ids =>", orderedIds)
+
                 $.ajax({
                     url: '{{ route('home.admin.featured.updateOrder') }}',
                     method: 'POST',

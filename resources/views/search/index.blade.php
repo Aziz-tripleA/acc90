@@ -37,13 +37,13 @@
 @section('scripts')
     <script >
         $(document).ready(function () {
-            console.log("init")
+
             $('#search-form').on('submit', function (e) {
 
                 e.preventDefault();
-                console.log("inside ")
+
                 var query = $('#search-input').val();
-                console.log(query)
+
                 var csrfToken = "{{ csrf_token() }}";
                 $.ajax({
                     type: 'POST',
