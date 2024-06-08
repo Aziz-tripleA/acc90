@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 
-    @php
-        $dir = "ltr";
-		$description = "لنقدم المشورة والتعليم، والحث والتشجيع
+@php
+    $dir = "ltr";
+    $description = "لنقدم المشورة والتعليم، والحث والتشجيع
 في كل حكمة ممكنة, لكي نحضر كل إنسان ناضجاً في المسيح يسوع";
-    @endphp
+@endphp
 <html lang="ar" dir="rtl">
 <head>
     <!-- start: meta tags-->
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content="{{$description}}"/>
     <meta property="type" content="website"/>
@@ -17,12 +17,16 @@
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="{{config('app.name')}}"/>
     <meta name="twitter:description" content="{{$description}}"/>
-    <meta name="twitter:image" content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}"/>
+    <meta name="twitter:image"
+          content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}"/>
     <meta property="og:title" content="{{config('app.name')}}">
     <meta property="og:description" content="{{$description}}"/>
-    <meta property="og:image" content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}">
-    <meta property="og:image:url" content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}"/>
-    <meta property="og:image:secure_url" content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}"/>
+    <meta property="og:image"
+          content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}">
+    <meta property="og:image:url"
+          content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}"/>
+    <meta property="og:image:secure_url"
+          content="{{isset($home) ? asset($home->getUrlFor('cover')) : asset('assets/front/logo.png')}}"/>
     <meta property="og:image:type" content="image/*"/>
     <meta property="og:image:width" content="400"/>
     <meta property="og:image:height" content="300"/>
@@ -54,7 +58,7 @@
     <link rel="stylesheet" href="{{asset('assets/styles/style.min-rtl.css')}}">
     <!-- end: style files end/. -->
     <style>
-        .fit-image{
+        .fit-image {
             object-position: center !important;
         }
     </style>
@@ -69,13 +73,16 @@
             <div class="main-slider-item">
                 <div class="main-slider-img-wrap wow fadeInUp">
                     <div class="main-slider-img">
-                        <img src="{{isset($home)&& $home->getUrlFor('cover')?$home->getUrlFor('cover'):asset('assets/images/backgrounds/img1.jpg')}}" alt="">
+                        <img
+                            src="{{isset($home)&& $home->getUrlFor('cover')?$home->getUrlFor('cover'):asset('assets/images/backgrounds/img1.jpg')}}"
+                            alt="">
                     </div>
                 </div>
                 <div class="main-slider-data wow fadeInUp">
                     <h1 class="section-title">{{isset($home)&&$home->first_section_title&&$locale=='en'?GoogleTranslate::trans($home->first_section_title, $locale):$home->first_section_title}}</h1>
                     <p>{{(isset($home)&&$home->first_section_subtitle&&$locale=='en')?GoogleTranslate::trans($home->first_section_subtitle, 'en'):$home->first_section_subtitle}}</p>
-                    <a class="site-btn" href="{{ route('service.index') }}">{{GoogleTranslate::trans('المزيد عن الخدمة ', $locale?:'ar')}}</a>
+                    <a class="site-btn"
+                       href="{{ route('service.index') }}">{{GoogleTranslate::trans('المزيد عن الخدمة ', $locale?:'ar')}}</a>
                 </div>
             </div>
         </div>
@@ -83,9 +90,9 @@
             @include('pages._partials.social-links',['color'=>'white'])
         </ul>
 
-{{--        <div class="translate-page-btn wow fadeInUp changeLang" style="cursor: pointer;" href=""><span>TRANSLATE PAGE </span>--}}
-{{--            <img src="{{asset('assets/images/icons/translate-icon.png')}}" alt="">--}}
-{{--        </div>--}}
+        {{--        <div class="translate-page-btn wow fadeInUp changeLang" style="cursor: pointer;" href=""><span>TRANSLATE PAGE </span>--}}
+        {{--            <img src="{{asset('assets/images/icons/translate-icon.png')}}" alt="">--}}
+        {{--        </div>--}}
 
         <div class="goTo-section wow fadeInUp">
             <a href="#next">
@@ -110,47 +117,55 @@
             </div>
         </div>
     </a>
-    <div class="studies-contain">
-        <div class="studies-wrap">
-            <div class="swiper-container studies-swiper">
-                <div class="swiper-wrapper">
-                    @if ($features)
+    @if (count($features))
+        <div class="studies-contain">
+            <div class="studies-wrap">
+                <div class="swiper-container studies-swiper">
+                    <div class="swiper-wrapper">
                         @foreach ($features as $item)
                             <div class="swiper-slide wow fadeInUp">
                                 <div class="studies-item">
-                                    <div class="studies-item-data"><strong>{{$item->featureable->title ?? $item->featureable->item_name ?? $item->featureable->name}}</strong>
-                                        <p>{!! strip_tags(substr($item->featureable->description ?? $item->featureable->fulltext ?? $item->featureable->book_details, 0, 250)) !!} ...</p>
-                                        <a class="site-btn primary" href="{{$item->featureableUrl()}}">{{ $locale == 'en'?GoogleTranslate::trans('معرفة المزيد ', $locale):'معرفة المزيد' }}</a>
+                                    <div class="studies-item-data">
+                                        <strong>{{$item->featureable->title ?? $item->featureable->item_name ?? $item->featureable->name}}</strong>
+                                        <p>{!! strip_tags(substr($item->featureable->description ?? $item->featureable->fulltext ?? $item->featureable->book_details, 0, 250)) !!}
+                                            ...</p>
+                                        <a class="site-btn primary"
+                                           href="{{$item->featureableUrl()}}">{{ $locale == 'en'?GoogleTranslate::trans('معرفة المزيد ', $locale):'معرفة المزيد' }}</a>
                                         @include('pages._partials.custom-navigation')
                                     </div>
                                     <div class="studies-item-img">
-                                        <img class="fit-image" src="{{isset($item->featureable->cover)?$item->featureable->cover->getUrl():asset('assets/images/default_image.png')}}" alt="">
+                                        <img class="fit-image"
+                                             src="{{isset($item->featureable->cover)?$item->featureable->cover->getUrl():asset('assets/images/default_image.png')}}"
+                                             alt="">
                                     </div>
                                 </div>
                             </div>
                         @endforeach
-                    @endif
-
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
     @if (count($services)>0)
         <div class="services-contain sectionTopPad sectionBotPad">
             <div class="services-wrap sectionPad">
-                <div class="section-head wow fadeInUp"><h2 class="section-title">{{ $locale=='en'?GoogleTranslate::trans('ما نقدم من خدمات', 'en'):'ما نقدم من خدمات'}}</h2></div>
+                <div class="section-head wow fadeInUp"><h2
+                        class="section-title">{{ $locale=='en'?GoogleTranslate::trans('ما نقدم من خدمات', 'en'):'ما نقدم من خدمات'}}</h2>
+                </div>
                 <div class="services-content wow fadeInUp">
                     <div class="site-tabs-wrap">
                         <div class="site-tabs-aside">
-                            <div class="site-tabs-head-mobile"><span>{{ $locale=='en'?GoogleTranslate::trans($services[0]->name, 'en'):$services[0]->name }}</span>
+                            <div class="site-tabs-head-mobile">
+                                <span>{{ $locale=='en'?GoogleTranslate::trans($services[0]->name, 'en'):$services[0]->name }}</span>
                                 <img src="{{asset('assets/images/icons/down-arrow-black.png')}}" alt="">
                             </div>
                             <div class="site-tabs-keys-wrap">
                                 <ul>
                                     @foreach ($services as $service )
-                                    <li class="site-tab-key @if($services[0]->id==$service->id)active @endif" related-tab="item{{$service->id}}">
-                                        <span>{{ $locale=='en'?GoogleTranslate::trans($service->name, 'en'):$service->name}}</span>
-                                    </li>
+                                        <li class="site-tab-key @if($services[0]->id==$service->id)active @endif"
+                                            related-tab="item{{$service->id}}">
+                                            <span>{{ $locale=='en'?GoogleTranslate::trans($service->name, 'en'):$service->name}}</span>
+                                        </li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -162,13 +177,17 @@
                                         <div class="services-item-data">
                                             <strong>{{$locale=='en'?GoogleTranslate::trans($service->name, 'en'):$service->name}}</strong>
                                             <p>{!! $service->description && $locale=='en'?GoogleTranslate::trans($service->description, 'en'):$service->description !!}</p>
-                                            <a class="normal-btn" href="{{ route('service.index').'?service='.$service->name }}"> {{$locale=='en'?GoogleTranslate::trans('المزيد', 'en'):'المزيد'}}</a>
+                                            <a class="normal-btn"
+                                               href="{{ route('service.index').'?service='.$service->name }}"> {{$locale=='en'?GoogleTranslate::trans('المزيد', 'en'):'المزيد'}}</a>
                                         </div>
                                         <div class="services-item-img-wrap">
                                             <div class="services-item-img">
-                                                <img class="fit-image" src="{{isset($service->cover)?$service->cover->getUrl():asset('assets/images/default_image.png')}}" alt="">
+                                                <img class="fit-image"
+                                                     src="{{isset($service->cover)?$service->cover->getUrl():asset('assets/images/default_image.png')}}"
+                                                     alt="">
                                             </div>
-                                            <a class="site-btn primary" href="{{route('service.index')}}">{{$locale=='en'?GoogleTranslate::trans('كل خدماتنا ', 'en'):'كل خدماتنا '}}</a>
+                                            <a class="site-btn primary"
+                                               href="{{route('service.index')}}">{{$locale=='en'?GoogleTranslate::trans('كل خدماتنا ', 'en'):'كل خدماتنا '}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -184,9 +203,12 @@
         <div class="featured-books-wrap sectionPad">
             <div class="featured-books-item">
                 <div class="featured-books-img wow fadeInUp">
-                    <img class="fit-image" src="{{$book->l_img?: ($book->s_img?:($book->cover?$book->cover->getUrl():asset('assets/images/default_book.png')))}}" alt="">
+                    <img class="fit-image"
+                         src="{{$book->l_img?: ($book->s_img?:($book->cover?$book->cover->getUrl():asset('assets/images/default_book.png')))}}"
+                         alt="">
                 </div>
-                <div class="featured-books-data wow fadeInUp"><strong>{{$locale=='en'?GoogleTranslate::trans('أحدث اصداراتنا ', $locale):'أحدث اصداراتنا'}}</strong>
+                <div class="featured-books-data wow fadeInUp">
+                    <strong>{{$locale=='en'?GoogleTranslate::trans('أحدث اصداراتنا ', $locale):'أحدث اصداراتنا'}}</strong>
                     <h3> {{ $book->item_name }}  </h3>
                     <p>{{$locale=='en'?GoogleTranslate::trans('متوافر بالمكتبات المسيحية، وبمكتبنا بشبرا، بالطبع', $locale):'متوافر بالمكتبات المسيحية، وبمكتبنا بشبرا، بالطبع'}}</p>
                     <a class="site-btn" href="{{ route('book.show',$book->slug) }}">
@@ -197,16 +219,19 @@
     </div>
     <div class="featured-articles courses-contain">
         <div class="featured-articles-wrap sectionPad">
-            <div class="featured-articles-head"><h2 class="section-title wow fadeInUp"> {{$locale=='en'?GoogleTranslate::trans('مواد تعليمية', $locale):'مواد تعليمية'}}</h2>
+            <div class="featured-articles-head"><h2
+                    class="section-title wow fadeInUp"> {{$locale=='en'?GoogleTranslate::trans('مواد تعليمية', $locale):'مواد تعليمية'}}</h2>
                 @include('pages._partials.custom-navigation')
-                <a class="site-btn primary" href="{{route('course.index')}}">{{$locale=='en'?GoogleTranslate::trans('كل المواد تعليمية', $locale):'كل المواد تعليمية'}}</a></div>
+                <a class="site-btn primary"
+                   href="{{route('course.index')}}">{{$locale=='en'?GoogleTranslate::trans('كل المواد تعليمية', $locale):'كل المواد تعليمية'}}</a>
+            </div>
             <div class="featured-articles-body">
                 <div class="swiper-container courses-swiper">
                     <div class="swiper-wrapper">
                         @foreach ($courses as $course)
-                        <div class="swiper-slide wow fadeInUp">
+                            <div class="swiper-slide wow fadeInUp">
                                 @include('pages.courses.partials.item')
-                        </div>
+                            </div>
                         @endforeach
                     </div>
                 </div>
@@ -225,7 +250,8 @@
                 </div>
             </div>
             <div class="employees-foot wow fadeInUp">
-                <a class="site-btn primary" href="{{ route('about') }}">{{$locale=='en'?GoogleTranslate::trans('كل الخدام', $locale):'كل الخدام'}} </a>
+                <a class="site-btn primary"
+                   href="{{ route('about') }}">{{$locale=='en'?GoogleTranslate::trans('كل الخدام', $locale):'كل الخدام'}} </a>
             </div>
         </div>
     </div>
@@ -233,7 +259,8 @@
         <div class="featured-articles-wrap sectionPad">
             <div class="featured-articles-head wow fadeInUp">
                 <h2 class="section-title">{{$locale=='en'?GoogleTranslate::trans(' المقالات ', $locale):'المقالات'}}</h2>
-                <a class="site-btn primary" href="{{ route('article.index') }}">{{$locale=='en'?GoogleTranslate::trans('كل المقالات ', $locale):'كل المقالات'}} </a>
+                <a class="site-btn primary"
+                   href="{{ route('article.index') }}">{{$locale=='en'?GoogleTranslate::trans('كل المقالات ', $locale):'كل المقالات'}} </a>
             </div>
             <div class="featured-articles-body">
                 @foreach ($articles as $article)
@@ -263,7 +290,7 @@
 <script type="text/javascript">
 
     var url = "{{ route('changeLang') }}";
-    $(".changeLang").on( "click", function() {
+    $(".changeLang").on("click", function () {
         window.location.href = url + "?lang=en";
     });
 

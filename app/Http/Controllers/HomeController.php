@@ -48,10 +48,7 @@ class HomeController extends Controller
 //                return Course::with(['lecturer','topic','media'])->orderByDesc('date')->take(5)->get();
 //            });
 //        }
-//        $features = Feature::orderBy('order','asc')->get();
-//        foreach ($features as $item) {
-//            dd($item->featureableUrl());
-//        }
+
        return view('welcome',[
             'book'=> Book::with('media')->where('type_id','1')->IsActive()->latest()->first(),
             'articles'=> Article::with(['writer','media'])->orderByDesc('date')->IsActive()->take(2)->get(),
