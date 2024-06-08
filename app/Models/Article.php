@@ -42,4 +42,8 @@ class Article extends BaseModel implements HasMediaContract , Searchable
             $url
         );
     }
+    public function features()
+    {
+        return $this->morphMany(Feature::class, 'featureable');
+    }
 }

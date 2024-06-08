@@ -4,9 +4,9 @@ Route::group([
     'as' => 'category.',
 ], function () {
 
-    Route::post('/', [
-        'as'   => 'index',
-        'uses' => 'CategoryController@index',
-    ]);
+//    Route::post('/', [
+//        'as'   => 'index',
+//        'uses' => 'CategoryController@index',
+//    ]);
 
 });

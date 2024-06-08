@@ -252,10 +252,8 @@
       success:function(response){
         $('#successMsg').show();
         window.location.href = response.url
-        console.log(response.url);
       },
       error: function(response) {
-        console.log(response);
         // if(response.responseJSON.errors.counseling_type_id){
         //   $('#typeErrorMsg').text('نوع المشورة مطلوب');
         // }else if(response.responseJSON.errors.terms){

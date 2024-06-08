@@ -30,3 +30,4 @@ Route::group([
 Route::get('lang/home', [LangController::class, 'index']);
 Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 Route::post('/search', [\App\Http\Controllers\SearchController::class, 'getSearchResult'])->name('search');
+Route::get('/search', [\App\Http\Controllers\SearchController::class, 'getSearchResultPage'])->name('search.show');

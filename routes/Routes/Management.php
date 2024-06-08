@@ -12,35 +12,35 @@ Route::group([
         'as' => 'role.',
     ], function () {
         /* -------------------------------- resource -------------------------------- */
-        Route::get('/', [
-            'as' => 'index',
-            'uses' => 'ManagerRoleController@index',
-        ]);
-
-        Route::get('create', [
-            'as' => 'create',
-            'uses' => 'ManagerRoleController@create',
-        ]);
-
-        Route::post('/', [
-            'as' => 'store',
-            'uses' => 'ManagerRoleController@store',
-        ]);
-
-        Route::get('{role}', [
-            'as' => 'edit',
-            'uses' => 'ManagerRoleController@edit',
-        ]);
-
-        Route::patch('update/{role}', [
-            'as' => 'update',
-            'uses' => 'ManagerRoleController@update',
-        ]);
-
-        Route::delete('destroy/{role}', [
-            'as' => 'destroy',
-            'uses' => 'ManagerRoleController@destroy',
-        ]);
+//        Route::get('/', [
+//            'as' => 'index',
+//            'uses' => 'ManagerRoleController@index',
+//        ]);
+//
+//        Route::get('create', [
+//            'as' => 'create',
+//            'uses' => 'ManagerRoleController@create',
+//        ]);
+//
+//        Route::post('/', [
+//            'as' => 'store',
+//            'uses' => 'ManagerRoleController@store',
+//        ]);
+//
+//        Route::get('{role}', [
+//            'as' => 'edit',
+//            'uses' => 'ManagerRoleController@edit',
+//        ]);
+//
+//        Route::patch('update/{role}', [
+//            'as' => 'update',
+//            'uses' => 'ManagerRoleController@update',
+//        ]);
+//
+//        Route::delete('destroy/{role}', [
+//            'as' => 'destroy',
+//            'uses' => 'ManagerRoleController@destroy',
+//        ]);
     });
     Route::group([
         'prefix' => 'admins',

@@ -6,6 +6,8 @@
         : asset('assets/admin/css/main.css')
     }}" rel="stylesheet"/>
     @yield('d-styles')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet" />
 @endsection
 @section('content')
 @section('body_class','disable_transitions sidebar_main_open sidebar_main_swipe')

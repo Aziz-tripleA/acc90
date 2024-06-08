@@ -1,6 +1,6 @@
 @csrf
 <div class="uk-grid" data-uk-grid-margin>
-    
+
     <div class="uk-width-medium-1-1">
         <div class="md-card">
             <div class="md-card-toolbar">
@@ -67,7 +67,7 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
 </div>
 <div class="uk-grid" data-uk-grid-margin>
     <div class="uk-width-medium-1-1">
@@ -97,7 +97,7 @@
                             name="second_section_subtitle"/>
                         @include("layouts.partials.form-errors",['field'=>"second_section_subtitle"])
                     </div>
-                    
+
                 </div>
             </div>
         </div>

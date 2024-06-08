@@ -114,38 +114,23 @@
         <div class="studies-wrap">
             <div class="swiper-container studies-swiper">
                 <div class="swiper-wrapper">
-                    @if ($featured_ads)
-                        @foreach ($featured_ads as $ad)
+                    @if ($features)
+                        @foreach ($features as $item)
                             <div class="swiper-slide wow fadeInUp">
                                 <div class="studies-item">
-                                    <div class="studies-item-data"><strong>{{ $locale == 'en'?GoogleTranslate::trans($ad->title, $locale):$ad->title }}</strong>
-                                        <p>{!! $locale == 'en'?GoogleTranslate::trans( strip_tags(substr($ad->description, 0, 150)), $locale):strip_tags(substr($ad->description, 0, 150)) !!} ...</p>
-                                        <a class="site-btn primary" href="{{ route('ads.show',$ad->id) }}">{{ $locale == 'en'?GoogleTranslate::trans('معرفة المزيد ', $locale):'معرفة المزيد' }}</a>
+                                    <div class="studies-item-data"><strong>{{$item->featureable->title ?? $item->featureable->item_name ?? $item->featureable->name}}</strong>
+                                        <p>{!! strip_tags(substr($item->featureable->description ?? $item->featureable->fulltext ?? $item->featureable->book_details, 0, 250)) !!} ...</p>
+                                        <a class="site-btn primary" href="{{$item->featureableUrl()}}">{{ $locale == 'en'?GoogleTranslate::trans('معرفة المزيد ', $locale):'معرفة المزيد' }}</a>
                                         @include('pages._partials.custom-navigation')
                                     </div>
                                     <div class="studies-item-img">
-                                        <img class="fit-image" src="{{isset($ad->cover)?$ad->cover->getUrl():asset('assets/images/default_image.png')}}" alt="">
+                                        <img class="fit-image" src="{{isset($item->featureable->cover)?$item->featureable->cover->getUrl():asset('assets/images/default_image.png')}}" alt="">
                                     </div>
                                 </div>
                             </div>
                         @endforeach
                     @endif
-                    @if ($featured_services)
-                        @foreach ($featured_services as $service)
-                            <div class="swiper-slide wow fadeInUp">
-                                <div class="studies-item">
-                                    <div class="studies-item-data"><strong>{{ $locale=='en'?GoogleTranslate::trans($service->name, $locale):$service->name}}</strong>
-                                        <p>{!! $locale=='en'?GoogleTranslate::trans($service->description, $locale):$service->description !!}</p><a
-                                            class="site-btn primary" href="{{ route('service.index').'?service='.$service->name }}">{{ $locale=='en'?GoogleTranslate::trans('معرفة المزيد ', $locale):'معرفة المزيد' }}</a>
-                                        @include('pages._partials.custom-navigation')
-                                    </div>
-                                    <div class="studies-item-img">
-                                        <img class="fit-image" src="{{isset($service->cover)?$service->cover->getUrl():asset('assets/images/default_image.png')}}" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endif
+
                 </div>
             </div>
         </div>

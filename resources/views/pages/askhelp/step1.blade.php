@@ -245,11 +245,9 @@ $('#SubmitForm').on('submit',function(e){
       },
       success:function(response){
         $('#successMsg').show();
-       // console.log(response);
         window.location.href = response.url
       },
       error: function(response) {
-        console.log(response);
         $('#fullnameErrorMsg').text(response.responseJSON.errors.fullname);
         $('#ageErrorMsg').text(response.responseJSON.errors.age);
         $('#humanTypeErrorMsg').text(response.responseJSON.errors.humanType);

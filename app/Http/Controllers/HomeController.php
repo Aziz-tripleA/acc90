@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ads;
 use App\Models\Book;
+use App\Models\Feature;
 use App\Models\User;
 use App\Models\Course;
 use App\Models\Article;
@@ -47,13 +48,18 @@ class HomeController extends Controller
 //                return Course::with(['lecturer','topic','media'])->orderByDesc('date')->take(5)->get();
 //            });
 //        }
-        return view('welcome',[
+//        $features = Feature::orderBy('order','asc')->get();
+//        foreach ($features as $item) {
+//            dd($item->featureableUrl());
+//        }
+       return view('welcome',[
             'book'=> Book::with('media')->where('type_id','1')->IsActive()->latest()->first(),
             'articles'=> Article::with(['writer','media'])->orderByDesc('date')->IsActive()->take(2)->get(),
             'courses'=> Course::with(['lecturer','topic','media'])->orderByDesc('date')->take(5)->get(),
             'employees' => Employee::with('media')->orderBy('created_at')->get(),
             'services'=> Service::with('media')->take(10)->get(),
             'home'=> HomeConfigs::first(),
+            'features'=> Feature::orderBy('order','asc')->get(),
             'featured_ads' => Ads::with('media')->where('is_featured',1)->orderBy('home_order')->get(),
             'featured_services' => Service::with('media')->where('is_featured',1)->orderBy('home_order')->get(),
             'youtube' => ContactData::where('title', 'youtube')->first()['value'],

@@ -81,7 +81,7 @@
                             @endforeach
                         </select>
                     </div>
-                    
+
                 </div>
                 <div class="uk-text-right mt-20">
                     <a class="md-btn md-btn-flat md-btn-wave waves-effect waves-button"
@@ -103,7 +103,7 @@
                 data-url="{{route('book.admin.deleteAll')}}">Delete All Selected
         </button>
         @include('pages._partials.sort-by')
-        
+
         <h3 id="count" class="uk-text-large ml-20">({{$books->total()}}) Books</h3>
         <div class="md-card uk-margin-medium-bottom">
             <div class="md-card-content">
@@ -144,7 +144,7 @@
     <script>
         $(document).ready(function() {
             $('.select2').select2();
-            $(".select2").select2({ width: '100%' });  
+            $(".select2").select2({ width: '100%' });
         });
     </script>
     <script>
@@ -182,7 +182,6 @@
                                         $(this).parents("tr").remove();
                                     });
                                     $("#count").text('('+data['count']+')'+' '+data['items']);
-                                    console.log('data',data);
                                     alert(data['success']);
                                 } else if (data['error']) {
                                     alert(data['error']);
