@@ -56,7 +56,7 @@
         <div class="video-iframe">
             {{video($about->third_section_video_url)}}
         </div>
-        <div class="video-wrap sectionPad wow fadeInUp"> 
+        <div class="video-wrap sectionPad wow fadeInUp">
             <strong>{{ isset($about) ? $about->third_section_title : '' }}</strong>
             <a class="video-btn" href="#">
                 <div class="video-btn-icon"> <img src="{{ asset('assets/images/icons/play-btn-arrow-black.png') }}" alt=""></div>
@@ -130,7 +130,7 @@
             </div>
         </div>
     </div>
-    <div class="employees-contain single sectionTopPad sectionBotPad" style="padding-bottom: 0px">
+    <div id="servants" class="employees-contain single sectionTopPad sectionBotPad" style="padding-bottom: 0px">
         <div class="employees-wrap sectionPad">
             <div class="">
                 <div class="swiper-container employees-swiper">

@@ -45,18 +45,20 @@
                   </ul>
                 </div>
               </div>
+                <a class="order-btn wow fadeInUp" href="https://wa.me/+201227708916" target="_blank"> طلب الكتاب </a>
             </div>
+              <div class="books-single-body" style="width: 100%;padding-top:30px">
+                  <div class="dynamic-data-wrap wow fadeInUp">
+                      {!! nl2br($book->book_details) !!}
+                      <br>
+                      {!! nl2br($book->book_index) !!}
+                  </div>
+              </div>
             @if ($book->type->type_name == 'اصداراتنا')
               {{-- <a class="order-btn wow fadeInUp" href="#"> طلب الكتاب </a> --}}
             @endif
           </div>
-          <div class="books-single-body" style="width: 100%;padding-top:30px">
-            <div class="dynamic-data-wrap wow fadeInUp">
-              {!! nl2br($book->book_details) !!}
-              <br>
-              {!! nl2br($book->book_index) !!}
-            </div>
-          </div>
+
         </div>
         <div class="related-books">
           <div class="section-head wow fadeInUp">
@@ -83,7 +85,7 @@
               </div>
             </div>
           </div>
-        @endif 
+        @endif
       </div>
     </div>
 @endsection

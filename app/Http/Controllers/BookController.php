@@ -33,7 +33,7 @@ class BookController extends Controller
             $img = $featured->cover?$featured->cover->getUrl():'';
         }
         if ($this->filterQueryStrings()) {
-            $books = $this->filterData($request, $books);  
+            $books = $this->filterData($request, $books);
         }
         $books = app(BookPresenter::class)->paginate($books->get());
         return view('pages.books.index',[
@@ -84,9 +84,9 @@ class BookController extends Controller
         $book = Book::where('slug', $slug)->firstorfail();
         $related_books = Book::query()->latest()->where('cat_id',$book->cat_id)->where('id','!=',$book->id)->take(4)->get();
         $small_books = [];
-        if($book->type_id == 3){
+//        if($book->type_id == 3){
             $small_books = Book::query()->IsActive()->latest()->where('type_id','3')->take(4)->get();
-        }
+//        }
 
         return view('pages.books.show',
             [

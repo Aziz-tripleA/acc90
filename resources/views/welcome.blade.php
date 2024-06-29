@@ -251,7 +251,7 @@
             </div>
             <div class="employees-foot wow fadeInUp">
                 <a class="site-btn primary"
-                   href="{{ route('about') }}">{{$locale=='en'?GoogleTranslate::trans('كل الخدام', $locale):'كل الخدام'}} </a>
+                   href="{{ route('servants') }}">{{$locale=='en'?GoogleTranslate::trans('كل الخدام', $locale):'كل الخدام'}} </a>
             </div>
         </div>
     </div>

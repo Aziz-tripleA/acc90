@@ -20,3 +20,4 @@ Route::group([
         'uses' => 'AboutConfigsController@update',
     ]);
 });
+Route::get('servants', [\App\Http\Controllers\Admin\AboutConfigsController::class, 'servants'])->name('servants');

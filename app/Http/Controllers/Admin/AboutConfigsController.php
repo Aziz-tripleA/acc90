@@ -50,7 +50,12 @@ class AboutConfigsController extends Controller
         if ($pdf_file = $request->pdf_file) {
             $aboutData->addHashedMedia($pdf_file)->toMediaCollection('pdf_file');
         }
-            
+
         return $this->returnCrudData('Updated Successfully');
+    }
+
+    public function servants()
+    {
+        return  redirect('about-us' .'#servants');
     }
 }
