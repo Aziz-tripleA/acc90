@@ -26,6 +26,7 @@ class BookController extends Controller
      */
     public function index(Request $request)
     {
+
         $books = Book::query()->IsActive()->latest();
         $featured = FeaturedImage::where('title','books')->first();
         $img ='';
@@ -35,7 +36,8 @@ class BookController extends Controller
         if ($this->filterQueryStrings()) {
             $books = $this->filterData($request, $books);
         }
-        $books = app(BookPresenter::class)->paginate($books->get());
+        $books = app(BookPresenter::class)->paginate($books->get(),[2]);
+
         return view('pages.books.index',[
             'books'=> $books,
             'locale' => request()->session()->get('locale'),
@@ -85,8 +87,9 @@ class BookController extends Controller
         $related_books = Book::query()->latest()->where('cat_id',$book->cat_id)->where('id','!=',$book->id)->take(4)->get();
         $small_books = [];
 //        if($book->type_id == 3){
-            $small_books = Book::query()->IsActive()->latest()->where('type_id','3')->take(4)->get();
+            $small_books = Book::query()->IsActive()->where('type_id',3)->inRandomOrder()->take(4)->get();
 //        }
+
 
         return view('pages.books.show',
             [

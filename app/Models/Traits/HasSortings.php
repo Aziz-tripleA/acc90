@@ -65,6 +65,7 @@ trait HasSortings
     {
         $arr = [];
         $sorting_options = $sorting_options ?: self::$sorting_options;
+
         foreach ($sorting_options as $index) {
             $arr[] = self::sortingList()[$index];
         }
