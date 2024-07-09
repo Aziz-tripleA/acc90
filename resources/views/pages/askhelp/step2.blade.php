@@ -165,7 +165,7 @@
               <div class="policies-key">
                 <label class="custom-checkbox checkbox">
                   <div class="custom-checkbox-label">
-                    <span>نرجو ارسال الابليكيشن بعد عمل scan علي الايميل التالي counseling.requests@gmail.com او تسليمها للمكتب مباشرة </span>
+                    <span>نرجو ارسال الابليكيشن بعد عمل scan علي الايميل التالي counseling.ministry@gmail.com او تسليمها للمكتب مباشرة </span>
                   </div>
                 </label>
               </div>

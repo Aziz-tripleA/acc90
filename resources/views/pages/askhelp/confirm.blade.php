@@ -6,7 +6,7 @@
       <div class="section-head sectionPad wow fadeInUp">
         <h1 class="section-title">تم تأكيد الطلب</h1>
         <p>
-            نرجو ارسال الابليكيشن بعد عمل scan علي الايميل التالي counseling.requests@gmail.com او تسليمها للمكتب مباشرة
+            نرجو ارسال الابليكيشن بعد عمل scan علي الايميل التالي counseling.ministry@gmail.com او تسليمها للمكتب مباشرة
 
         </p>
       </div>

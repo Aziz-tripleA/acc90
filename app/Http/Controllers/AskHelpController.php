@@ -10,6 +10,7 @@ use App\Http\Requests\StoreAskHelpRequest;
 use App\Http\Requests\UpdateAskHelpRequest;
 use App\Http\Controllers\Traits\AskHelp\Filtration;
 use App\Models\CounselingType;
+use Illuminate\Support\Facades\Mail;
 
 class AskHelpController extends Controller
 {
@@ -129,7 +130,8 @@ class AskHelpController extends Controller
     {
         $data = $request->except(['terms']);
         $askHelp->update($data);
-        
+        // email  
+        Mail::to('')->send();
         return $this->returnCrudData(__('system_messages.common.create_success'), route('askhelp.confirm'));
     }
 
