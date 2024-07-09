@@ -11,14 +11,15 @@ class CounselingRequestMail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    private $askHelp;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($askHelp)
     {
-        //
+        $this->askHelp = $askHelp;
     }
 
     /**
@@ -27,7 +28,9 @@ class CounselingRequestMail extends Mailable
      * @return $this
      */
     public function build()
-    {
-        return $this->view('view.name');
+    { 
+        return $this->subject('New Counseling Message')
+        ->view('emails.newCounselingEmail')
+        ->with('askHelp', $this->askHelp);
     }
 }
