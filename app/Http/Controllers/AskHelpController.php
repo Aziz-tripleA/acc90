@@ -137,7 +137,7 @@ class AskHelpController extends Controller
         $req = $askHelp->update($data);
         if ($req) {
             // email  counseling.ministry@gmail.com   
-            Mail::to("aziz.adel.fci@gmail.com")->send(new CounselingRequestMail(AskHelp::find($askHelp->id)));
+            Mail::to("saraadelwassef@gmail.com")->send(new CounselingRequestMail(AskHelp::find($askHelp->id)));
         }
         return $this->returnCrudData(__('system_messages.common.create_success'), route('askhelp.confirm'));
     }
