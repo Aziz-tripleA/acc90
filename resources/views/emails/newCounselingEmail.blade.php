@@ -1018,9 +1018,7 @@ END CONFIG STYLES
                                                                     <td width="460" align="left" class="esd-container-frame">
                                                                         <table cellpadding="0" cellspacing="0" width="100%">
                                                                             <tbody>
-                                                                                <tr>
-                                                                                    <td align="center" class="esd-block-image es-p20b es-m-txt-c" style="font-size: 0px;"><a target="_blank" href="https://viewstripo.email"><img src="https://tlr.stripocdn.email/content/guids/CABINET_cc952a79d6ea8e3c503431d548249b8c/images/group11wqwe.png" alt="Logo" style="display: block;" title="Logo" height="40"></a></td>
-                                                                                </tr>
+                                                            
                                                                                 <tr>
                                                                                     <td align="center" class="esd-block-text es-p20t" esd-links-underline="none">
                                                                                         <p><a target="_blank"></a>Copyright ©2022 acc90.com</p>
