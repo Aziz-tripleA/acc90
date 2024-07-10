@@ -29,7 +29,7 @@ class CounselingRequestMail extends Mailable
      */
     public function build()
     { 
-        return $this->subject('New Counseling Message')
+        return $this->subject('New Counseling Request')
         ->view('emails.newCounselingEmail')
         ->with('askHelp', $this->askHelp);
     }

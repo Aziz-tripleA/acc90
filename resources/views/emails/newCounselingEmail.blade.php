@@ -907,7 +907,7 @@ END CONFIG STYLES
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <td align="center" class="esd-block-text">
-                                                                                        <h1>New Counseling Order &nbsp;</h1>
+                                                                                        <h1>New Counseling Request &nbsp;</h1>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
