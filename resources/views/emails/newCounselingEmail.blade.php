@@ -907,7 +907,7 @@ END CONFIG STYLES
                                                                             <tbody>
                                                                                 <tr>
                                                                                     <td align="center" class="esd-block-text">
-                                                                                        <h1>New Counseling&nbsp;</h1>
+                                                                                        <h1>New Counseling Order &nbsp;</h1>
                                                                                     </td>
                                                                                 </tr>
                                                                                 <tr>
@@ -937,43 +937,53 @@ END CONFIG STYLES
                                                                                             <tbody>
                                                                                                
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Alan Hodges</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">&nbsp;<a target="_blank" style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px; text-decoration: none;" href="tel:+(000)123456">+(000) 123 456</a>&nbsp;</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Name</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->fullname}}</td>
                                                                                                     
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Dennis Lee</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;"><a target="_blank" style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px; text-decoration: none;" href="tel:+(000)123456">+(000) 123 456</a></td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Email</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->email}}</td>
                                                                                                     
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Darleen Powell</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;"><a target="_blank" style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px; text-decoration: none;" href="tel:+(000)123456">+(000) 123 456</a></td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Mobile</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->mobile}}</td>
                                                                                                     
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Jane Mccoy</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;"><a target="_blank" style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px; text-decoration: none;" href="tel:+(000)123456">+(000) 123 456</a></td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Age</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->age}}</td>
                                                                                                    
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Myra Blake</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;"><a target="_blank" style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px; text-decoration: none;" href="tel:+(000)123456">+(000) 123 456</a></td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Gender</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->humanType}}</td>
                                                                                                    
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Miles Randall</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;"><a target="_blank" style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px; text-decoration: none;" href="tel:+(000)123456">+(000) 123 456</a></td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">City</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->city}}</td>
                                                                                                     
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Ralph Stanley</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;"><a target="_blank" style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px; text-decoration: none;" href="tel:+(000)123456">+(000) 123 456</a></td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Contact us before?</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->contactBefore}}</td>
                                                                                                     
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Robyn Allison</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;"></td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Has Previous Counseling?</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->has_previous_help?"نعم":"لا"}}</td>
+                                                                                                </tr>
+                                                                                                <tr style="height:50px">
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">How you know us?</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->how_know}}</td>
+                                                                                                    
+                                                                                                </tr>
+                                                                                                <tr style="height:50px">
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Counseling Type</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->type->type}}</td>
+                                                                     
                                                                                                 </tr>
                                                                                                
                                                                                             </tbody>
