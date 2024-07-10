@@ -982,7 +982,7 @@ END CONFIG STYLES
                                                                                                 </tr>
                                                                                                 <tr style="height:50px">
                                                                                                     <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">Counseling Type</td>
-                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->type->type}}</td>
+                                                                                                    <td style="text-align: center; font-family: manrope, arial, sans-serif; font-size: 12px;">{{$askHelp->type?$askHelp->type->type:''}}</td>
                                                                      
                                                                                                 </tr>
                                                                                                
