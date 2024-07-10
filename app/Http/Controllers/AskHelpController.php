@@ -131,8 +131,8 @@ class AskHelpController extends Controller
     {
         $data = $request->except(['terms']);
         $askHelp->update($data);
-        // email  
-        Mail::to("counseling.ministry@gmail.com")->send(new CounselingRequestMail($askHelp));
+        // email  counseling.ministry@gmail.com
+        Mail::to("saraadelwassef@gmail.com")->send(new CounselingRequestMail($askHelp));
         return $this->returnCrudData(__('system_messages.common.create_success'), route('askhelp.confirm'));
     }
 
