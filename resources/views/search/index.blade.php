@@ -7,17 +7,12 @@
           <div class="product-result-body">
             <div class="main-search-form">
                 <form id="search-form">
-                    <div class="form-group">
-                        <input id="search-input"
-                               class="form-input"
-                               type="text"
-                               placeholder="بحث…"/>
-                        <img
-                            class="input-floating-icon"
-                            src="{{ asset('assets/images/icons/search.png') }}"
-                            alt=""
-                        />
-                    </div>
+                <div class="form-group">
+                  <input id="search-input" class="form-input" type="text" placeholder="بحث …" name="q" value="">
+                  <button class="search-btn" type="submit">
+                    <img src="{{ asset('assets/images/icons/search-colored.png') }}" alt="">
+                  </button>
+                </div>
                 </form>
             </div>
 

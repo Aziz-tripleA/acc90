@@ -59,7 +59,11 @@
             <ul class="header-extra-links">
                 <li>
                     <div class="header-search-key">
-                        <img src="{{ asset('assets/images/icons/search.png') }}" alt="" width="18"/>
+                    <a href="{{ route('search.show') }}" >
+                        <div >
+                            <img src="{{ asset('assets/images/icons/search.png') }}" alt="" width="18"/>
+                        </div>
+                    </a>
                     </div>
                 </li>
                 <li><a class="border-btn"
@@ -82,7 +86,11 @@
     <div class="header-search-content">
 
         <div class="header-search-key">
-            <img src="{{ asset('assets/images/new/icons/close-black.png') }}" alt=""/>
+        <a href="{{ route('search.show') }}" >
+                        <div >
+                            <img src="{{ asset('assets/images/icons/search.png') }}" alt="" width="18"/>
+                        </div>
+                    </a>
         </div>
     </div>
     <div class="product-listing-contain sectionBotPad">
